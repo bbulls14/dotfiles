@@ -55,6 +55,7 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 --auto-session
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
+-- correct colors for line numbers to match colorscheme and have proper contrast for visibility
 vim.api.nvim_set_hl(0, 'LineNr', { fg = "#a7a5a4" })
 vim.api.nvim_set_hl(0, "Comment", { fg = "#a7a5a4" })
 

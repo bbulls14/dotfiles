@@ -2,12 +2,40 @@ return {
 	-- github.com/nvim-treesitter/nvim-treesitter
 	{
 		"git@github.com:nvim-treesitter/nvim-treesitter.git",
-		run = "TSUpdate",
+		run = ":TSUpdate",
+		--lazy load when openning a buffer of existing file or new file
+		event = { "BufReadPre", "BufNewFile" },
+		requires = "nvim-treesitter/nvim-treesitter-textobjects", 
 		config = function()
 			require("nvim-treesitter.configs").setup({
-				auto_install = true,
+				auto_install = false,
 				highlight = { enable = true },
 				indent = { enable = true },
+				ensure_installed = { 
+					"markdown", 
+					"markdown_inline", 
+					"lua", 
+					"bash", 
+					"bibtex", 
+					"java", 
+					"python",
+					"r",
+					"rust",
+					"latex", 
+					"nix", 
+					"Tree-Sitter query language", 
+					"sql",
+				},
+				incremental_selection = {
+					enable = true,
+					keymaps = {
+						init_selection = "<C-space>",
+						node_incremental = "<C-space>",
+						scope_incremental = false,
+						node_decremental = "<bs>",
+					},
+				},
+				
 				textobjects = {
 					move = {
 						enable = true,
@@ -63,9 +91,5 @@ return {
 			})
 		end,
 	},
-	
-	{
-	"nvim-treesitter/nvim-treesitter-textobjects",
-	}
-	
+
 }

@@ -1,4 +1,5 @@
 return {
+
 	--github.com/akinsho/bufferline.nvim
 	{
 		"git@github.com:akinsho/bufferline.nvim.git",
@@ -11,7 +12,6 @@ return {
 					right_mouse_command = "bdelete! %d", -- Right-click buffer delete
 					left_mouse_command = "buffer %d", -- Click to go to buffer
 					middle_mouse_command = nil, -- Disable middle-click
-					-- More customization options...
 				},
 			})
 		end,
