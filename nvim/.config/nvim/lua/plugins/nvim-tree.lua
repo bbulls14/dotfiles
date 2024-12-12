@@ -3,7 +3,7 @@ return {
 
 	--github.com/nvim-tree/nvim-tree.lua
 	{
-		"git@github.com:nvim-tree/nvim-tree.lua.git",
+		"nvim-tree/nvim-tree.lua",
 		requires = {
 			"nvim-tree/nvim-web-devicons", -- Optional for file icons
 		},

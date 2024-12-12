@@ -1,7 +1,7 @@
 return {
 	-- github.com/nvim-treesitter/nvim-treesitter
 	{
-		"git@github.com:nvim-treesitter/nvim-treesitter.git",
+		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 		--lazy load when openning a buffer of existing file or new file
 		event = { "BufReadPre", "BufNewFile" },
@@ -48,7 +48,6 @@ return {
 						node_decremental = "<bs>",
 					},
 				},
-				
 				textobjects = {
 					move = {
 						enable = true,

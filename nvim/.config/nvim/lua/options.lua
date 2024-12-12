@@ -6,7 +6,7 @@ vim.g.mapleader = " "
 
 
 local opt = vim.opt
-
+opt.conceallevel = 1
 opt.number = true -- Enables line numbers
 opt.relativenumber = true -- Enables relative line numbers
 opt.autoindent = true -- Indent automatically

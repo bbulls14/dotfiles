@@ -1,11 +1,10 @@
 return {
 	--github.com/nvim-tree/nvim-web-devicons
 	{
-		"git@github.com:nvim-tree/nvim-web-devicons.git",
+		"nvim-tree/nvim-web-devicons",
 		config = function()
 			require("nvim-web-devicons").setup({
 				-- Globally enable default icons (set to false to disable)
-				
 				  override_by_filename = {
 				    [".toml"] = {
 				      icon = "", -- "T in a box" icon
@@ -15,7 +14,6 @@ return {
 				    },
 				  },
 				  default = true,
-				
 			})
 		end,
 	},

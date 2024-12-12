@@ -6,7 +6,7 @@ return {
   		    	"nvim-lua/plenary.nvim",
     			"hrsh7th/nvim-cmp",
     			"nvim-telescope/telescope.nvim",
-    			"nvim-treesitte",
+    			"nvim-treesitter",
     		},
     		config = function()
     			require("obsidian").setup({	
@@ -21,8 +21,6 @@ return {
   --   "BufReadPre path/to/my-vault/*.md",
   --   "BufNewFile path/to/my-vault/*.md",
   -- },
-  
-				 
 				    workspaces = {
 				      {
 					name = "BullsWIP",
@@ -31,8 +29,6 @@ return {
 				    },
 				    notes_subdir = "inbox",
 				    new_notes_location = "notes_subdir",
-				    
-
 				    completion = {
 				      -- set to False to disable completion
 				      nvim_cmp = true,
@@ -66,9 +62,29 @@ return {
 				    },
 
     -- see below for full list of options 👇
-  			
   			})
-  		end,
-  		
-		}
-	}
+		end,
+		},
+
+	{
+		--pretty markdown
+		'MeanderingProgrammer/render-markdown.nvim',
+		enabled = false,
+		opts = {},
+		dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+	},
+
+	{
+
+		--markdown preview
+		'iamcco/markdown-preview.nvim',
+			cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+			build = 'cd app && yarn install',
+			keys = {},
+			init = function()
+				vim.g.mkdp_filetypes = { 'markdown' }
+		end,
+		ft = { 'markdown' },
+
+	},
+}

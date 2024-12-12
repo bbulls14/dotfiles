@@ -2,7 +2,7 @@ return {
 	-- Comment.nvim plugin for easy commenting
 	-- github.com/numToStr/Comment.nvim
 	{
-		"git@github.com:numToStr/Comment.nvim.git",
+		"numToStr/Comment.nvim",
 		config = function()
 			require("Comment").setup()
 		end,
@@ -11,7 +11,7 @@ return {
 	-- LSP signature plugin (function signatures when typing)
 	-- github.com/ray-x/lsp_signature.nvim
 	{
-		"git@github.com:ray-x/lsp_signature.nvim.git",
+		"ray-x/lsp_signature.nvim",
 		config = function()
 			require("lsp_signature").setup()
 		end,
@@ -20,7 +20,7 @@ return {
 	-- Automatic indentation detection
 	-- github.com/NMAC427/guess-indent.nvim
 	{
-		"git@github.com:NMAC427/guess-indent.nvim.git",
+		"NMAC427/guess-indent.nvim",
 		config = function()
 			require("guess-indent").setup()
 		end,
@@ -29,7 +29,7 @@ return {
 	-- Auto pair brackets and quotes
 	-- github.com/windwp/nvim-autopairs
 	{
-		"git@github.com:windwp/nvim-autopairs.git",
+		"windwp/nvim-autopairs",
 		config = function()
 			require("nvim-autopairs").setup({})
 		end,
@@ -37,7 +37,7 @@ return {
 
 	-- github.com/Pocco81/auto-save.nvim
 	{
-		"git@github.com:pocco81/auto-save.nvim.git",
+		"pocco81/auto-save.nvim",
 		config = function()
 			require("auto-save").setup()
 		end,

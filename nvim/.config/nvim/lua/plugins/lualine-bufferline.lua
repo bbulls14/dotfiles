@@ -2,7 +2,7 @@ return {
 
 	--github.com/akinsho/bufferline.nvim
 	{
-		"git@github.com:akinsho/bufferline.nvim.git",
+		"akinsho/bufferline.nvim",
 		requires = "nvim-tree/nvim-web-devicons", -- Optional dependency for icons
 		config = function()
 			require("bufferline").setup({
@@ -19,7 +19,7 @@ return {
 
 	--github.com/nvim-lualine/lualine.nvim
 	{
-		"git@github.com:nvim-lualine/lualine.nvim.git",
+		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true }, -- Optional icons
 		config = function()
 			require("lualine").setup({
