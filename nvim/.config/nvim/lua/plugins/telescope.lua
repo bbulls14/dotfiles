@@ -53,7 +53,7 @@ return {
           buffer_previewer_maker = new_maker,
           vimgrep_arguments = vimgrep_arguments,
           file_ignore_patterns = {
-            'node_modules',
+            'node_modules/',
             '%_cache',
             '.git/',
             'site_libs',

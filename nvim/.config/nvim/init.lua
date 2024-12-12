@@ -41,10 +41,17 @@ local devicons = require("nvim-web-devicons")
 -- Explicitly set the `.toml` icon with updated color and icon
 devicons.set_icon {
   toml = {
-    icon = "", -- Stylized text search icon
+    icon = "🅣", -- Stylized text search icon
     color = "#9c4221", -- Match color from the image
     cterm_color = "124", -- Terminal color from the image
     name = "Toml", -- Name for the icon
+  },
+  --fix the color
+    ipynb = {
+    icon = "🌐", -- Stylized text search icon
+    color = "#FFA500", -- Match color from the image
+    cterm = "124",
+    name = "Ipynb", -- Name for the icon
   }
 }
 
@@ -53,7 +60,7 @@ vim.keymap.set('n', '<C-p>', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 
 --auto-session
-vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+--vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- correct colors for line numbers to match colorscheme and have proper contrast for visibility
 vim.api.nvim_set_hl(0, 'LineNr', { fg = "#a7a5a4" })
@@ -74,15 +81,15 @@ vim.api.nvim_set_keymap('n', 'g9', ":lua require('bufferline').go_to_buffer(9, t
 vim.api.nvim_set_keymap('n', 'g0', ":lua require('bufferline').go_to_buffer(10, true)<CR>", { noremap = true, silent = true })
 
 -- Close buffer with Shift + Ctrl + Q
-vim.api.nvim_set_keymap('n', '<C-Q>', ":lua require('bufdelete').bufdelete(0, true)<CR>", { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('n', '<C-Q>', ":lua require('bufdelete').bufdelete(0, true)<CR>", { noremap = true, silent = true })
 
 -- Cycle through buffers
-vim.api.nvim_set_keymap('n', '<M-j>', ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-k>', ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('n', '<M-j>', ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('n', '<M-k>', ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
 
 -- Move buffer positions
-vim.api.nvim_set_keymap('n', '<M-J>', ":BufferLineMovePrev<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-K>', ":BufferLineMoveNext<CR>", { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('n', '<M-J>', ":BufferLineMovePrev<CR>", { noremap = true, silent = true })
+--vim.api.nvim_set_keymap('n', '<M-K>', ":BufferLineMoveNext<CR>", { noremap = true, silent = true })
 
 -- Toggle nvim-tree with <leader>e
 vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
