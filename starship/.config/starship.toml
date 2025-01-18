@@ -27,6 +27,7 @@ $username\
 $directory\
 $git_branch\
 $git_status\
+$direnv\
 $c\
 $elixir\
 $elm\
@@ -82,7 +83,6 @@ style = "bg:#D08770"
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
-
 
 [python]
 symbol = "🐍"

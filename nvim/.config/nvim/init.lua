@@ -95,6 +95,5 @@ vim.api.nvim_set_keymap('n', 'g0', ":lua require('bufferline').go_to_buffer(10, 
 vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 
-vim.g.python3_host_prog = '~/.config/nvim/python3_venv/bin/python'
 
 

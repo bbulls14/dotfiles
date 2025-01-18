@@ -34,7 +34,7 @@ return {
 					lualine_a = { "mode" }, -- Displays current mode (e.g., NORMAL, INSERT)
 					lualine_b = {"filename" }, -- Git branch
 					lualine_c = {"branch" }, -- File name in the middle
-					lualine_x = { }, -- File encoding and type
+					lualine_x = { }, 
 					lualine_y = { "progress" }, -- Progress in the file (e.g., line number/percentage)
 					lualine_z = { "location" }, -- Current cursor position
 				},

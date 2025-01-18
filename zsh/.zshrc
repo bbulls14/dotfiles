@@ -49,3 +49,5 @@ export NVM_DIR="/home/bbulls/.nvm"
 
 source $HOME/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+eval "$(direnv hook zsh)"
+
