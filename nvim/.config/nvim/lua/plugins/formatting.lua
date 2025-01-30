@@ -7,15 +7,21 @@ return {
 			require("Comment").setup()
 		end,
 	},
+	
+	-- disable hungry features for files larger than 2MB
+	{ 'LunarVim/bigfile.nvim' },
+	
+	  { -- generate docstrings
+	    'danymat/neogen',
+	    cmd = { 'Neogen' },
+	    dependencies = 'nvim-treesitter/nvim-treesitter',
+	    config = true,
+	  },
+	
+	{ -- format things as tables
+    	'godlygeek/tabular',
+  	},
 
-	-- LSP signature plugin (function signatures when typing)
-	-- github.com/ray-x/lsp_signature.nvim
-	{
-		"ray-x/lsp_signature.nvim",
-		config = function()
-			require("lsp_signature").setup()
-		end,
-	},
 
 	-- Automatic indentation detection
 	-- github.com/NMAC427/guess-indent.nvim
@@ -26,14 +32,6 @@ return {
 		end,
 	},
 
-	-- Auto pair brackets and quotes
-	-- github.com/windwp/nvim-autopairs
-	{
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
-	},
 
 	-- github.com/Pocco81/auto-save.nvim
 	{

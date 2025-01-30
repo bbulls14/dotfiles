@@ -11,23 +11,7 @@ return {
       -- configured in lua/plugins/lsp.lua and
       -- added as a nvim-cmp source in lua/plugins/completion.lua
       'jmbuhr/otter.nvim',
-      'neovim/nvim-lspconfig',
     },
-    config = function()
-      require 'quarto'.setup {
-        lspfeatures = {
-          enabled = true,
-          languages = { 'r', 'python' , 'julia'},
-          diagnostics = {
-            enabled = true,
-            triggers = { "BufWrite"}
-          },
-          completions = {
-            enabled = true
-          }
-        }
-      }
-    end
   },
 
   { -- directly open ipynb files as quarto docuements

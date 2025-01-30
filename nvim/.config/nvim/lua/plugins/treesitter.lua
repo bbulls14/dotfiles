@@ -1,107 +1,90 @@
 return {
-	-- github.com/nvim-treesitter/nvim-treesitter
-	{
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
-		--lazy load when openning a buffer of existing file or new file
-		event = { "BufReadPre", "BufNewFile" },
-		requires = "nvim-treesitter/nvim-treesitter-textobjects",
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				auto_install = false,
-				highlight = { enable = true },
-				indent = { enable = true },
-				ensure_installed = {
-					      'lua',
-					      'python',
-					      'javascript',
-					      'typescript',
-					      'vimdoc',
-					      'vim',
-					      'regex',
-					      'terraform',
-					      'sql',
-					      'dockerfile',
-					      'toml',
-					      'json',
-					      'java',
-					      'groovy',
-					      'go',
-					      'gitignore',
-					      'graphql',
-					      'yaml',
-					      'make',
-					      'cmake',
-					      'markdown',
-					      'markdown_inline',
-					      'bash',
-					      'tsx',
-					      'css',
-					      'html',
-				},
-				incremental_selection = {
-					enable = true,
-					keymaps = {
-						init_selection = "<C-space>",
-						node_incremental = "<C-space>",
-						scope_incremental = false,
-						node_decremental = "<bs>",
-					},
-				},
-				textobjects = {
-					move = {
-						enable = true,
-						set_jumps = true, -- Sets jumps in the jumplist for better navigation
-						goto_next_start = {
-							["]m"] = "@function.outer",
-							["gj"] = "@function.outer",
-							["]]"] = "@class.outer",
-							["]b"] = "@block.outer",
-							["]a"] = "@parameter.inner",
-						},
-						goto_next_end = {
-							["]M"] = "@function.outer",
-							["gJ"] = "@function.outer",
-							["]["] = "@class.outer",
-							["]B"] = "@block.outer",
-							["]A"] = "@parameter.inner",
-						},
-						goto_previous_start = {
-							["[m"] = "@function.outer",
-							["gk"] = "@function.outer",
-							["[["] = "@class.outer",
-							["[b"] = "@block.outer",
-							["[a"] = "@parameter.inner",
-						},
-						goto_previous_end = {
-							["[M"] = "@function.outer",
-							["gK"] = "@function.outer",
-							["[]"] = "@class.outer",
-							["[B"] = "@block.outer",
-							["[A"] = "@parameter.inner",
-						},
-					},
-					select = {
-						enable = true,
-						lookahead = true, -- Automatically jump forward to text objects
-						keymaps = {
-							["af"] = "@function.outer",
-							["if"] = "@function.inner",
-							["ac"] = "@class.outer",
-							["ic"] = "@class.inner",
-							["ab"] = "@block.outer",
-							["ib"] = "@block.inner",
-							["al"] = "@loop.outer",
-							["il"] = "@loop.inner",
-							["a/"] = "@comment.outer",
-							["i/"] = "@comment.outer", -- No inner for comments
-							["aa"] = "@parameter.outer", -- Argument
-							["ia"] = "@parameter.inner",
-						},
-					},
-				},
-			})
-		end,
-	},
-
+  {
+    'nvim-treesitter/nvim-treesitter',
+    dev = false,
+    dependencies = {
+      {
+        'nvim-treesitter/nvim-treesitter-textobjects',
+        'nvim-treesitter/nvim-treesitter-refactor',
+      },
+    },
+    run = ':TSUpdate',
+    config = function()
+      ---@diagnostic disable-next-line: missing-fields
+      require('nvim-treesitter.configs').setup {
+        auto_install = true,
+        ensure_installed = {
+          'python',
+          'markdown',
+          'markdown_inline',
+          'julia',
+          'bash',
+          'yaml',
+          'lua',
+          'vim',
+          'query',
+          'vimdoc',
+          'html',
+          'css',
+          'dot',
+          'javascript',
+          'mermaid',
+          'norg',
+          'typescript',
+        },
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = false,
+        },
+        indent = {
+          enable = true,
+        },
+        incremental_selection = {
+          enable = true,
+          keymaps = {
+            init_selection = 'gnn',
+            node_incremental = 'grn',
+            scope_incremental = 'grc',
+            node_decremental = 'grm',
+          },
+        },
+        refactor = {
+          highlight_definitions = { enable = true, clear_on_cursor_move = true, },
+        },
+        textobjects = {
+          select = {
+            enable = true,
+            lookahead = true,
+            keymaps = {
+              -- You can use the capture groups defined in textobjects.scm
+              ['af'] = '@function.outer',
+              ['if'] = '@function.inner',
+              ['ac'] = '@class.outer',
+              ['ic'] = '@class.inner',
+            },
+          },
+          move = {
+            enable = true,
+            set_jumps = true, -- whether to set jumps in the jumplist
+            goto_next_start = {
+              [']m'] = '@function.outer',
+              [']]'] = '@class.inner',
+            },
+            goto_next_end = {
+              [']M'] = '@function.outer',
+              [']['] = '@class.outer',
+            },
+            goto_previous_start = {
+              ['[m'] = '@function.outer',
+              ['[['] = '@class.inner',
+            },
+            goto_previous_end = {
+              ['[M'] = '@function.outer',
+              ['[]'] = '@class.outer',
+            },
+          },
+        },
+      }
+    end,
+  },
 }

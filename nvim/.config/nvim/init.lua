@@ -38,7 +38,7 @@ require("lazy").setup({
 
 local devicons = require("nvim-web-devicons")
 
--- Explicitly set the `.toml` icon with updated color and icon
+-- Explicitly set the `.toml` and '.ipynb' icons with updated color and icon
 devicons.set_icon {
   toml = {
     icon = "🅣", -- Stylized text search icon
@@ -52,12 +52,13 @@ devicons.set_icon {
     color = "#FFA500", -- Match color from the image
     cterm = "124",
     name = "Ipynb", -- Name for the icon
-  }
+  },
+    qmd = {
+    icon = "🦦",
+    name = "qmd",
+  },
 }
 
-local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 
 --auto-session
 --vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
@@ -91,8 +92,6 @@ vim.api.nvim_set_keymap('n', 'g0', ":lua require('bufferline').go_to_buffer(10, 
 --vim.api.nvim_set_keymap('n', '<M-J>', ":BufferLineMovePrev<CR>", { noremap = true, silent = true })
 --vim.api.nvim_set_keymap('n', '<M-K>', ":BufferLineMoveNext<CR>", { noremap = true, silent = true })
 
--- Toggle nvim-tree with <leader>e
-vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 
 

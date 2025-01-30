@@ -33,7 +33,7 @@ return {
 				sections = {
 					lualine_a = { "mode" }, -- Displays current mode (e.g., NORMAL, INSERT)
 					lualine_b = {"filename" }, -- Git branch
-					lualine_c = {"branch" }, -- File name in the middle
+					lualine_c = {"branch", "diff", 'diagnostics'}, -- File name in the middle
 					lualine_x = { }, 
 					lualine_y = { "progress" }, -- Progress in the file (e.g., line number/percentage)
 					lualine_z = { "location" }, -- Current cursor position

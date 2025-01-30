@@ -8,7 +8,7 @@ return {
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
       { 'nvim-telescope/telescope-dap.nvim' },
       { 'nvim-lua/plenary.nvim' },
-      { 'kmfussenegger/nvim-dap', url = 'git@github.com:mfussenegger/nvim-dap.git' },
+      { 'mfussenegger/nvim-dap' },
       {
         'jmbuhr/telescope-zotero.nvim',
         enabled = true,
@@ -17,7 +17,11 @@ return {
           { 'kkharji/sqlite.lua' },
         },
         config = function()
-          vim.keymap.set('n', '<leader>fz', ':Telescope zotero<cr>', { desc = '[z]otero' })
+          local builtin = require('telescope.builtin')
+		vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+		vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+		vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+		vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
         end,
       },
     },
@@ -111,5 +115,5 @@ return {
       telescope.load_extension 'zotero'
     end,
   },
-
+  
 }
