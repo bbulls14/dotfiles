@@ -121,15 +121,15 @@ return {
           },
         },
         sources = {
-          -- { name = 'otter' }, -- for code chunks in quarto
-          { name = 'path', keyword_length = 4, max_item_count = 3 },
-          { name = 'nvim_lsp_signature_help', keyword_length = 4, max_item_count = 3 },
-          { name = 'nvim_lsp', keyword_length = 4, max_item_count = 3 },
-          { name = 'luasnip', keyword_length = 4, max_item_count = 3 },
+          { name = 'otter' }, -- for code chunks in quarto
+          { name = 'path', keyword_length = 3, max_item_count = 3 },
+          { name = 'nvim_lsp_signature_help', keyword_length = 3, max_item_count = 3 },
+          { name = 'nvim_lsp', keyword_length = 3, max_item_count = 3 },
+          { name = 'luasnip', keyword_length = 3, max_item_count = 3 },
           { name = 'pandoc_references' },
-          { name = 'buffer', keyword_length = 4, max_item_count = 3 },
-          { name = 'spell', keyword_length = 4, max_item_count = 3 },
-          { name = 'treesitter', keyword_length = 4, max_item_count = 3 },
+          { name = 'buffer', keyword_length = 3, max_item_count = 3 },
+          { name = 'spell', keyword_length = 3, max_item_count = 3 },
+          { name = 'treesitter', keyword_length = 3, max_item_count = 3 },
           { name = 'calc' },
           { name = 'latex_symbols' },
           { name = 'emoji' },
@@ -142,6 +142,12 @@ return {
           documentation = cmp.config.window.bordered(),
           },
         }
+      cmp.setup.filetype({ "sql" }, {
+        sources = {
+          { name = "vim-dadbod-completion" },
+          { name = "buffer" },
+        },
+      })
 
       -- for friendly snippets
       require('luasnip.loaders.from_vscode').lazy_load()

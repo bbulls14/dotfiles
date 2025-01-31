@@ -38,7 +38,7 @@ require("lazy").setup({
 
 local devicons = require("nvim-web-devicons")
 
--- Explicitly set the `.toml` and '.ipynb' icons with updated color and icon
+-- Explicitly set the '.toml', '.ipynb', '.qmd' icons with updated color and icon
 devicons.set_icon {
   toml = {
     icon = "🅣", -- Stylized text search icon
@@ -59,38 +59,10 @@ devicons.set_icon {
   },
 }
 
-
---auto-session
---vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-
 -- correct colors for line numbers to match colorscheme and have proper contrast for visibility
 vim.api.nvim_set_hl(0, 'LineNr', { fg = "#a7a5a4" })
 vim.api.nvim_set_hl(0, "Comment", { fg = "#a7a5a4" })
 
-
--- Add these mappings for bufferline tab navigation
--- Go to specific buffer by number
-vim.api.nvim_set_keymap('n', 'g1', ":lua require('bufferline').go_to_buffer(1, true)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'g2', ":lua require('bufferline').go_to_buffer(2, true)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'g3', ":lua require('bufferline').go_to_buffer(3, true)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'g4', ":lua require('bufferline').go_to_buffer(4, true)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'g5', ":lua require('bufferline').go_to_buffer(5, true)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'g6', ":lua require('bufferline').go_to_buffer(6, true)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'g7', ":lua require('bufferline').go_to_buffer(7, true)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'g8', ":lua require('bufferline').go_to_buffer(8, true)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'g9', ":lua require('bufferline').go_to_buffer(9, true)<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'g0', ":lua require('bufferline').go_to_buffer(10, true)<CR>", { noremap = true, silent = true })
-
--- Close buffer with Shift + Ctrl + Q
---vim.api.nvim_set_keymap('n', '<C-Q>', ":lua require('bufdelete').bufdelete(0, true)<CR>", { noremap = true, silent = true })
-
--- Cycle through buffers
---vim.api.nvim_set_keymap('n', '<M-j>', ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
---vim.api.nvim_set_keymap('n', '<M-k>', ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
-
--- Move buffer positions
---vim.api.nvim_set_keymap('n', '<M-J>', ":BufferLineMovePrev<CR>", { noremap = true, silent = true })
---vim.api.nvim_set_keymap('n', '<M-K>', ":BufferLineMoveNext<CR>", { noremap = true, silent = true })
 
 
 

@@ -22,3 +22,5 @@ opt.sessionoptions:remove('options') -- don't save keymaps and local options
 opt.foldlevelstart = 99 -- no auto folding
 opt.laststatus = 3 -- Global line
 opt.laststatus = 2 -- The default, ocal
+
+
