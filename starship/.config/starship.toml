@@ -28,6 +28,15 @@ $directory\
 $git_branch\
 $git_status\
 $direnv\
+$python\
+$quarto\
+$ruby\
+$lua\
+$gcloud\
+$aws\
+$azure\
+$golang\
+$php\
 $c\
 $elixir\
 $elm\
@@ -86,69 +95,69 @@ style = "bg:#D08770"
 
 [python]
 symbol = "🐍"
-style = "bg:#212736"
-format = '[[ $symbol ($version)(\($virtualenv\)) ](bg:#D8DEE9)]($style)'
+style = "bg:#81A1C1"
+format = '[$symbol ($version)(\($virtualenv\))]($style)'
 
 [java]
 symbol = "☕"
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](bg:#D8DEE9)]($style)'
+style = "bg:#81A1C1"
+format = '[$symbol ($version)]($style)'
 
 [ruby]
 symbol = "💎 "
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#81A1C1"
+format = '[ $symbol ($version)]($style)'
 
 [quarto]
-symbol = "⨁ "
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](bg:#D8DEE9)]($style)'
+symbol = "🦦 "
+style = "bg:#81A1C1"
+format = '[$symbol ($version)]($style)'
 
 [lua]
 symbol = "🌙 "
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](bg:#D8DEE9)]($style)'
+style = "bg:#81A1C1"
+format = '[$symbol ($version)]($style)'
 
 [gcloud]
 symbol = '☁️ '
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](bg:#D8DEE9)]($style)'
+style = "bg:#81A1C1"
+format = '[$symbol ($version)]($style)'
 
 [aws]
 symbol = '☁️ '
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](bg:#D8DEE9)]($style)'
+style = "bg:#81A1C1"
+format = '[$symbol ($version) ]($style)'
 
 [azure]
 symbol = '󰠅 ' 
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](bg:#D8DEE9)]($style)'
+style = "bg:#81A1C1"
+format = '[$symbol ($version) ]($style)'
 
 [nodejs]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](bg:#D8DEE9)]($style)'
+symbol = '🐢 '
+style = "bg:#81A1C1"
+format = '[$symbol ($version) ]($style)'
 
 [rust]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](bg:#D8DEE9)]($style)'
+symbol = '🦀 '
+style = "bg:#81A1C1"
+format = '[$symbol ($version) ]($style)'
 
 [golang]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](bg:#D8DEE9)]($style)'
+symbol = '🐹 '
+style = "bg:#81A1C1"
+format = '[$symbol ($version) ]($style)'
 
 [php]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](bg:#D8DEE9)]($style)'
+symbol = '🐘 '
+style = "bg:#81A1C1"
+format = '[$symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
-format = '[[  $time ](bg:#D8DEE9)]($style)'
+format = '[[  $time ](bg:#81A1C1)]($style)'
 
 
 

@@ -68,10 +68,10 @@ return {
       }
       require('mason-tool-installer').setup {
         ensure_installed = {
-          'black',
+          'ruff',
           'stylua',
           'shfmt',
-          'isort',
+          'black',
           'tree-sitter-cli',
           'jupytext',
         },
