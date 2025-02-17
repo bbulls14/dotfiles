@@ -38,7 +38,7 @@ rm $1.class
 
 # create a new virtual environment, activate it, and create .envrc automatically
 venv() {
-	local venv_name=
+	local venv_name
 	local dir_name=$(basename "$PWD")
 	
 	# if there are no arguments or the last argument starts with a dash, use dir_name
@@ -50,7 +50,7 @@ venv() {
 	fi
 	
 	
-	#check if .envrc already exists
+	# check if .envrc already exists
 	if [ -f .envrc]; then
 		echo "ERROR: .envrc already exists" >&2
 		return 1
@@ -83,7 +83,7 @@ workon() {
 		return 1
 	fi
 	
-	#Get the fproject directory for the given project name
+	#Get the project directory for the given project name
 	project_dir=$(grep -E "^$project_name\s*=" "$projects_file" | sed 's/^[^=]*=\s*//')
 	
 	# Ensure a project directory was found
@@ -100,7 +100,7 @@ workon() {
 	
 	# change directories
 	cd "$project_dir"
-}	
+}
 
 
 autoload -Uz compinit
