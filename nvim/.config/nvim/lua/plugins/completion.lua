@@ -142,7 +142,7 @@ return {
           documentation = cmp.config.window.bordered(),
           },
         }
-      cmp.setup.filetype({ "sql" }, {
+      cmp.setup.filetype({ "sql", "mysql", "plsql" }, {
         sources = {
           { name = "vim-dadbod-completion" },
           { name = "buffer" },
@@ -161,7 +161,7 @@ return {
 
   { -- gh copilot
     'zbirenbaum/copilot.lua',
-    enabled = false,
+    enabled = true,
     config = function()
       require('copilot').setup {
         suggestion = {

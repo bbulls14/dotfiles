@@ -48,7 +48,7 @@ devicons.set_icon {
   },
   --fix the color
     ipynb = {
-    icon = "🌐", -- Stylized text search icon
+    icon = "🗠", -- Stylized text search icon
     color = "#FFA500", -- Match color from the image
     cterm = "124",
     name = "Ipynb", -- Name for the icon

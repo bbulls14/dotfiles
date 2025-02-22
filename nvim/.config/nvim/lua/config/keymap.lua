@@ -221,11 +221,11 @@ wk.add({
 wk.add({
     {
       mode = { "v" },
-      { ".", ":norm .<cr>", desc = "repat last normal mode command" },
+      { ".", ":norm .<cr>", desc = "repeat last normal mode command" },
       { "<M-j>", ":m'>+<cr>`<my`>mzgv`yo`z", desc = "move line down" },
       { "<M-k>", ":m'<-2<cr>`>my`<mzgv`yo`z", desc = "move line up" },
       { "<cr>", send_region, desc = "run code region" },
-      { "q", ":norm @q<cr>", desc = "repat q macro" },
+      { "q", ":norm @q<cr>", desc = "repeat q macro" },
     },
 })
 
@@ -280,7 +280,7 @@ local function get_otter_symbols_lang()
   for i,l in ipairs(otterkeeper.rafts[main_nr].languages) do
     langs[i] = i .. ': ' .. l
   end
-  -- promt to choose one of langs
+  -- prompt to choose one of langs
   local i = vim.fn.inputlist(langs)
   local lang = otterkeeper.rafts[main_nr].languages[i]
   local params = {

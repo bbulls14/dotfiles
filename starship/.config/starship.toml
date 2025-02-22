@@ -28,8 +28,8 @@ $directory\
 $git_branch\
 $git_status\
 $direnv\
-$python\
 $quarto\
+$python\
 $ruby\
 $lua\
 $gcloud\
@@ -94,7 +94,7 @@ style = "bg:#D08770"
 "Pictures" = " "
 
 [python]
-symbol = "🐍"
+symbol = " 🐍"
 style = "bg:#81A1C1"
 format = '[$symbol ($version)(\($virtualenv\))]($style)'
 
@@ -104,54 +104,54 @@ style = "bg:#81A1C1"
 format = '[$symbol ($version)]($style)'
 
 [ruby]
-symbol = "💎 "
+symbol = " 💎"
 style = "bg:#81A1C1"
-format = '[ $symbol ($version)]($style)'
+format = '[$symbol ($version)]($style)'
 
 [quarto]
-symbol = "🦦 "
+symbol = "🦦"
 style = "bg:#81A1C1"
 format = '[$symbol ($version)]($style)'
 
 [lua]
-symbol = "🌙 "
+symbol = " 🌙"
 style = "bg:#81A1C1"
 format = '[$symbol ($version)]($style)'
 
 [gcloud]
-symbol = '☁️ '
+symbol = '☁️'
 style = "bg:#81A1C1"
 format = '[$symbol ($version)]($style)'
 
 [aws]
-symbol = '☁️ '
+symbol = '☁️'
 style = "bg:#81A1C1"
-format = '[$symbol ($version) ]($style)'
+format = '[$symbol ($version)]($style)'
 
 [azure]
 symbol = '󰠅 ' 
 style = "bg:#81A1C1"
-format = '[$symbol ($version) ]($style)'
+format = '[$symbol ($version)]($style)'
 
 [nodejs]
-symbol = '🐢 '
+symbol = '🐢'
 style = "bg:#81A1C1"
-format = '[$symbol ($version) ]($style)'
+format = '[$symbol ($version)]($style)'
 
 [rust]
-symbol = '🦀 '
+symbol = '🦀'
 style = "bg:#81A1C1"
-format = '[$symbol ($version) ]($style)'
+format = '[$symbol ($version)]($style)'
 
 [golang]
-symbol = '🐹 '
+symbol = '🐹'
 style = "bg:#81A1C1"
-format = '[$symbol ($version) ]($style)'
+format = ' [$symbol ($version) ]($style)'
 
 [php]
 symbol = '🐘 '
 style = "bg:#81A1C1"
-format = '[$symbol ($version) ]($style)'
+format = '[$symbol ($version)]($style)'
 
 [time]
 disabled = false

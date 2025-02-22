@@ -42,7 +42,7 @@ venv() {
 	local dir_name=$(basename "$PWD")
 	
 	# if there are no arguments or the last argument starts with a dash, use dir_name
-	if [ $# -eq 0 ] || [[ "${!#}" == -* ]]; then
+	if [[ $# -eq 0 ]] || [[ "${!#}" == -* ]]; then
 		venv_name="$dir_name"
 	else
 		venv_name="${!#}"
@@ -51,7 +51,7 @@ venv() {
 	
 	
 	# check if .envrc already exists
-	if [ -f .envrc]; then
+	if [ -f .envrc ]; then
 		echo "ERROR: .envrc already exists" >&2
 		return 1
 	fi
